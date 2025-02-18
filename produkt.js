@@ -5,25 +5,17 @@ const urlParams = new URLSearchParams(queryString);
 const myProductId = urlParams.get("id");
 
 const mealType = urlParams.get("mealType");
-const names = urlParams.get("name");
-
-// mealtype breadcrumb
-const mealtypebreadcrumb = document.querySelector("#mealtypebreadcrumb");
-mealtypebreadcrumb.textContent = mealType;
-
-// name breadcrumb
-const namebreadcrumb = document.querySelector("#namebreadcrumb");
-namebreadcrumb.textContent = names;
 
 let productContainer = document.querySelector(".container");
 
 fetch(`https://dummyjson.com/recipes/${myProductId}`)
   .then((response) => response.json())
   .then((element) => {
+    document.querySelector("#nameheading").textContent = element.name;
+
     document.querySelector("#mealtypebreadcrumb").innerHTML = `<a  href="produktliste.html?mealType=${element.mealType}">${element.mealType}</a> > `;
     document.querySelector("#namebreadcrumb").textContent = element.name;
     productContainer.innerHTML = /*html*/ `
-      <h1>${element.name}</h1>
 
       <div class="produkt">
         <div>
