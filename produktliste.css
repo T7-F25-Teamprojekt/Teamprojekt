@@ -6,18 +6,30 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
-  gap: 15px;
+  gap: 2rem;
 }
 
 .box {
   grid-row: span 4;
   display: grid;
   grid-template-rows: subgrid;
-  gap: 10px;
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border: 1px solid #ddd;
   border-radius: 8px;
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 4rem;
+  }
+
+  .box {
+    grid-row: span 4;
+    display: grid;
+    grid-template-rows: subgrid;
+    border-radius: 8px;
+  }
 }
 
 .flex {
@@ -58,4 +70,155 @@ nav ul li:last-child {
 
 #mealtypebreadcrumb {
   color: #951b1e; /* Tilpasser tekstfarve */
+}
+
+/******* header og footer ******/
+
+header {
+  text-align: center;
+  padding-bottom: 4%;
+  padding-top: 2%;
+}
+
+.logo {
+  width: 15%;
+}
+
+.sammen {
+  background-color: #951b1e;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 2%;
+  padding-bottom: 3%;
+  margin-top: 8rem;
+}
+
+.footer_h2 {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 4rem;
+}
+
+.footer_p {
+  font-family: inter;
+  color: white;
+  margin-top: -5%;
+}
+
+label {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.footer_billede {
+  width: 100%;
+  padding: auto;
+  margin-inline: center;
+  padding-top: 15%;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 70%; /** Fylder det hele **/
+  padding: 12px; /** Større felter **/
+  border: 1.5px solid white; /** Kant farve **/
+  border-radius: 7px; /** Rundere hjørner **/
+  margin-top: 6px; /** Felt afstand til h **/
+  margin-bottom: 16px; /** Afstand ef. boks **/
+  font-family: lato; /** Font **/
+  background-color: #951b1e;
+}
+
+.boks2 {
+  margin: auto;
+  margin-inline: center;
+}
+
+button {
+  cursor: pointer; /** Mussehånd **/
+  border: 1.5px solid white; /** Kant farve **/
+  background-color: #951b1e;
+  color: white;
+  border-radius: 12px; /** Rundere hjørner **/
+  text-decoration: underline;
+  padding: 8px; /** Større felter **/
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.knap {
+  padding-top: 2%;
+}
+
+.name,
+.email {
+  padding-top: 1%;
+}
+
+button:hover {
+  background-color: white;
+  color: #951b1e;
+  font-weight: bolder;
+}
+
+@media (max-width: 800px) {
+  .footer_h2 {
+    font-size: 3rem;
+  }
+
+  .footer_billede {
+    width: 70%;
+    padding-left: 20%;
+    padding-right: 10%;
+  }
+
+  .footer_p {
+    font-size: 0.8rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 70%;
+  }
+}
+
+/** MOBIL **/
+@media (max-width: 600px) {
+  .sammen {
+    grid-template-columns: 1fr;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 90%;
+  }
+
+  .knap {
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+
+  .footer_billede {
+    width: 80%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .boks2 {
+    text-align: center;
+  }
+
+  .footer_h2 {
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
 }
