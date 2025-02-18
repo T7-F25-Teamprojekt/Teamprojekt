@@ -8,16 +8,27 @@ function showlist(ellement) {
   console.log(ellement);
   let markup = ellement
     .map((ellement) => {
-      return ` <div>
-                    <img src=""https://cdn.dummyjson.com/recipe-images/${ellement.id}.webp"" alt="catogori">  
-                    
+      return `  <div class="indexgrid_1">
 
-                    <div>
+            <div>
+
+                <div>
+                   <img src="https://cdn.dummyjson.com/recipe-images/${ellement.id}.webp" alt="billede"> 
+                </div>
+                <div>
                     <h3>${ellement.mealType}</h3>
-                    </div>
-                </div>`;
+                </div>
+
+            </div> 
+        </div>
+`;
     })
     .join("");
 
   container.innerHTML = markup;
 }
+
+
+
+
+

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+main {
+  background-color: #f1f1f1;
+}
+
 .displayfont {
   display: flex;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -15,7 +19,7 @@
 .underoverskrift {
   display: flex;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 4vw;
+  font-size: 5vw;
   justify-content: center;
   align-items: center;
 }
@@ -39,6 +43,7 @@
   align-items: center;
 
   padding-top: 10vw;
+  padding-bottom: 5vw;
 }
 
 .undercategorie {
@@ -53,9 +58,250 @@
   grid-template-columns: 1fr 1fr;
 }
 
-@media (max-width: 600px) {
+.indexgrid_1 div {
+  text-align: center;
+}
+
+.indexgrid_1 img {
+  width: 30vw;
+  height: 30vw;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #f1f1f1;
+}
+
+.indexgrid_1 h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.indexgrid_1 img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 600px) {
   .indexgrid_1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+  }
+
+  .indexgrid_1 div {
+    text-align: center;
+  }
+
+  .indexgrid_1 img {
+    width: 20vw;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #f1f1f1;
+  }
+
+  .indexgrid_1 h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-transform: capitalize;
+  }
+
+  .indexgrid_1 img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 65vw;
+  height: 5.5vw;
+  max-width: 700px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  margin: 20px auto;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.search-button:hover {
+  opacity: 0.7;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 4%;
+  padding-top: 2%;
+}
+
+.logo {
+  width: 15%;
+}
+
+.sammen {
+  background-color: #951b1e;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 2%;
+  padding-bottom: 3%;
+}
+
+.footer_h2 {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 4rem;
+}
+
+.footer_p {
+  font-family: inter;
+  color: white;
+  margin-top: -5%;
+}
+
+label {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.footer_billede {
+  width: 100%;
+  padding: auto;
+  margin-inline: center;
+  padding-top: 15%;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 70%; /** Fylder det hele **/
+  padding: 12px; /** Større felter **/
+  border: 1.5px solid white; /** Kant farve **/
+  border-radius: 7px; /** Rundere hjørner **/
+  margin-top: 6px; /** Felt afstand til h **/
+  margin-bottom: 16px; /** Afstand ef. boks **/
+  font-family: lato; /** Font **/
+  background-color: #951b1e;
+}
+
+.boks2 {
+  margin: auto;
+  margin-inline: center;
+}
+
+button {
+  cursor: pointer; /** Mussehånd **/
+  border: 1.5px solid white; /** Kant farve **/
+  background-color: #951b1e;
+  color: white;
+  border-radius: 12px; /** Rundere hjørner **/
+  text-decoration: underline;
+  padding: 8px; /** Større felter **/
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.knap {
+  padding-top: 2%;
+}
+
+.name,
+.email {
+  padding-top: 1%;
+}
+
+button:hover {
+  background-color: white;
+  color: #951b1e;
+  font-weight: bolder;
+}
+
+@media (max-width: 800px) {
+  .footer_h2 {
+    font-size: 3rem;
+  }
+
+  .footer_billede {
+    width: 70%;
+    padding-left: 20%;
+    padding-right: 10%;
+  }
+
+  .footer_p {
+    font-size: 0.8rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 70%;
+  }
+}
+
+/** MOBIL **/
+@media (max-width: 600px) {
+  .sammen {
+    grid-template-columns: 1fr;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 90%;
+  }
+
+  .knap {
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+
+  .footer_billede {
+    width: 80%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .boks2 {
+    text-align: center;
+  }
+
+  .footer_h2 {
+    font-size: 4rem;
+  }
+
+  label {
+    font-size: 0.9rem;
   }
 }
