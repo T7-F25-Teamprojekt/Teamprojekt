@@ -31,7 +31,8 @@ img {
 }
 
 .stjerne {
-  width: 15px;
+  width: 20px;
+  padding-left: 5px;
 }
 
 nav ul {
