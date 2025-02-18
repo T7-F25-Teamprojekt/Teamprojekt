@@ -5,13 +5,13 @@
 }
 
 main {
-  background-color: #f1f1f1;
+  background-color: #f6f5f1;
 }
 
-.displayfont {
+#displayfont {
   display: flex;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 14.5vw;
+  font-size: 13.5vw;
   justify-content: center;
   align-items: center;
 }
@@ -56,6 +56,7 @@ main {
 .indexgrid_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 20vw;
 }
 
 .indexgrid_1 div {
@@ -91,6 +92,7 @@ main {
     gap: 20px;
     justify-items: center;
     padding: 20px;
+    padding-bottom: 15vw;
   }
 
   .indexgrid_1 div {
@@ -124,7 +126,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: white !important;
   border-radius: 30px;
   padding: 10px 20px;
   width: 65vw;
@@ -140,7 +142,7 @@ main {
   outline: none;
   flex: 1;
   font-size: 16px;
-  background: transparent;
+  background: transparent !important;
 }
 
 .search-button {
@@ -180,12 +182,13 @@ header {
   color: white;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 4rem;
+  padding-bottom: 3vw;
 }
 
 .footer_p {
-  font-family: inter;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
-  margin-top: -5%;
+  font-size: 1.5vw;
 }
 
 label {
@@ -199,6 +202,7 @@ label {
   padding: auto;
   margin-inline: center;
   padding-top: 15%;
+  z-index: 100000;
 }
 
 input[type="text"],
