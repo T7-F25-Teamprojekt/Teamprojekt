@@ -197,3 +197,43 @@ button:hover {
   }
 }
 
+/* brødkrumme */
+
+nav ul {
+  list-style: none; /* Fjerner punkttegn */
+  display: flex; /* Gør listen til en række */
+  padding: 0; /* Fjerner standard-padding */
+  margin: 0; /* Fjerner standard-margin */
+}
+
+nav ul li {
+  display: inline; /* Sørger for, at <li> står på linje */
+  margin-right: 5px; /* Lidt afstand mellem elementerne */
+}
+
+nav ul li a {
+  text-decoration: underline; /* Fjerner understregning fra links */
+  color: #951b1e; /* Tilpasser tekstfarve */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Fjerner margin fra det sidste element */
+}
+
+#namebreadcrumb{
+text-decoration: underline; /* Fjerner understregning fra links */
+  color: #951b1e; /* Tilpasser tekstfarve */
+}
+
+/** stjerne */ 
+
+.rating {
+  display: flex;
+  align-self: flex-end;
+}
+
+.stjerne {
+  width: 22px;
+  margin-left: 5px;
+}
+
