@@ -7,6 +7,8 @@ const mealtypeheading = document.querySelector("#mealtypeheading");
 mealtypeheading.textContent = mealType;
 
 // mealtype breadcrumb
+const mealtypebreadcrumb = document.querySelector("#mealtypebreadcrumb");
+mealtypebreadcrumb.textContent = mealType;
 
 // recipie list
 
