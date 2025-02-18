@@ -4,6 +4,17 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const myProductId = urlParams.get("id");
 
+const mealType = urlParams.get("mealType");
+const names = urlParams.get("name");
+
+// mealtype breadcrumb
+const mealtypebreadcrumb = document.querySelector("#mealtypebreadcrumb");
+mealtypebreadcrumb.textContent = mealType;
+
+// name breadcrumb
+const namebreadcrumb = document.querySelector("#namebreadcrumb");
+namebreadcrumb.textContent = names;
+
 let productContainer = document.querySelector(".container");
 
 fetch(`https://dummyjson.com/recipes/${myProductId}`)
