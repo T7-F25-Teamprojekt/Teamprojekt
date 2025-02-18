@@ -1,29 +1,28 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const myElement = urlParams.get("id");
+const mealType = urlParams.get("mealType");
 
-let elementId = myElement;
-let container = document.querySelector(".container");
+// mealtype heading
+const mealtypeheading = document.querySelector("#mealtypeheading");
+mealtypeheading.textContent = mealType;
 
-fetch(`https://dummyjson.com/recipes/`)
+// mealtype breadcrumb
+
+// recipie list
+
+let productContainer = document.querySelector(".container");
+
+fetch(`https://dummyjson.com/recipes`)
+  // https://kea-alt-del.dk/t7/api/products/${productId} billeder
   .then((response) => response.json())
-  .then((data) => showElement(data));
+  .then((data) => showList(data));
 
-function showElement(data) {
-  container.innerHTML = `
-        <article class="produktliste">
-            <h1>${element.mealtype}</h1>
-            <nav>
-                <ul class="breadcrumb">
-                    <li><a href="index.html">Home</a> > </li>
-                    <li><a href="index.html"> Categories</a> > </li>
-                    <li><a href="index.html"> Meal Types</a> > </li>
-                    <li><a href="produktliste.html">${element.mealtype}</a></li>
-                </ul>
-            </nav>
-
-            <h2>Get inspired for lunch with tasty recipes</h2>
-
+function showList(data) {
+  console.log(data);
+  const markup = data.recipes
+    .map(
+      (element) => `
+         <article class="produktliste">
             <div class="box">
                 <img src="https://cdn.dummyjson.com/recipe-images/${element.id}.webp" alt="madbilleder">
                 <h3>${element.name}</h3>
@@ -33,12 +32,18 @@ function showElement(data) {
                     <div>
                         <p>Cook Time: ${element.cookTimeMinutes} min</p>
                     </div>
-                    <div class="flex">
+                    <div class="rating">
                         <p>${element.rating}/5.0</p>
-                        <img src="ikoner/star.svg" alt="stjerne_ratings">
+                        <img class="stjerne" src="ikoner/star.svg" alt="stjerne_ratings">
                     </div>
+                    
                 </div>
+                    <a href="produkt.html?id=${element.id}">Read More</a>
             </div>
-        </article>
-    `;
+
+            </div>
+        </article>`
+    )
+    .join("");
+  productContainer.innerHTML = markup;
 }
