@@ -24,26 +24,40 @@ function showList(data) {
   const markup = data.recipes
     .map(
       (element) => `
-         <article class="produktliste">
-            <div class="box">
-                <img src="https://cdn.dummyjson.com/recipe-images/${element.id}.webp" alt="madbilleder">
-                <h3>${element.name}</h3>
-                <p>Prep Time: ${element.prepTimeMinutes} min</p>
+         <article class="box">
+          
+                <div class="billede_kasse">
+                    <a href="produkt.html?id=${element.id}">
+                        <img class="billede" src="https://cdn.dummyjson.com/recipe-images/${element.id}.webp" alt="madbilleder">
+                    </a>
+                </div>
+                
+                <a href="produkt.html?id=${element.id}">
+                    <h3>${element.name}</h3>
+                 </a>
+
+                <a href="produkt.html?id=${element.id}">
+                    <p class="p_tekst">Prep Time: ${element.prepTimeMinutes} min</p>
+                 </a>
 
                 <div class="flex">
                     <div>
-                        <p>Cook Time: ${element.cookTimeMinutes} min</p>
-                    </div>
-                    <div class="rating">
-                        <p>${element.rating}/5.0</p>
-                        <img class="stjerne" src="ikoner/star.svg" alt="stjerne_ratings">
+                        <a href="produkt.html?id=${element.id}">
+                            <p class="p_tekst_2">Cook Time: ${element.cookTimeMinutes} min</p>
+                        </a>    
                     </div>
                     
+                    <div class="rating">
+                        <a href="produkt.html?id=${element.id}">
+                            <p class="p_tekst_2">${element.rating}/5.0</p>
+                        </a>
+                        <img class="stjerne" src="ikoner/star.svg" alt="stjerne_ratings">
+                    </div>
                 </div>
-                    <a href="produkt.html?id=${element.id}">Read More</a>
-            </div>
 
-            </div>
+                <a class="readmore" href="produkt.html?id=${element.id}">Go to recipe</a>
+
+
         </article>`
     )
     .join("");
