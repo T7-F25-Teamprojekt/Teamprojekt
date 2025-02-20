@@ -330,6 +330,16 @@ nav ul li a {
     font-size: 10px; /* Mindre tekststørrelse på mobil */
   }
 
+  #mealtypebreadcrumb{
+    font-size: 14px;
+    margin-bottom: 1px;
+  }
+
+  #namebreadcrumb{
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
 }
 
 
