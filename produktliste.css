@@ -20,11 +20,13 @@ img {
   font-size: 18px;
   margin-top: -1rem;
   margin-bottom: -1rem;
+  font-family: "Times New Roman", Times, serif;
 }
 .p_tekst_2 {
   font-size: 18px;
   margin-top: -1rem;
   margin-bottom: -1rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 h1 {
@@ -141,10 +143,12 @@ nav ul li:last-child {
   .p_tekst {
     font-size: 22px;
     margin-top: -0.5rem;
+    font-family: "Times New Roman", Times, serif;
   }
   .p_tekst_2 {
     font-size: 22px;
     margin-top: 0.5rem;
+    font-family: "Times New Roman", Times, serif;
   }
 
   .readmore {
@@ -178,10 +182,12 @@ nav ul li:last-child {
   .p_tekst {
     font-size: 22px;
     margin-top: -1rem;
+    font-family: "Times New Roman", Times, serif;
   }
   .p_tekst_2 {
     font-size: 22px;
     margin-top: -1rem;
+    font-family: "Times New Roman", Times, serif;
   }
 
   h2 {
