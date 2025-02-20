@@ -259,7 +259,13 @@ nav ul li:last-child {
 #namebreadcrumb{
 text-decoration: underline; /* Fjerner understregning fra links */
   color: #951b1e; /* Tilpasser tekstfarve */
+  
 }
+
+#mealtypebreadcrumb{
+margin-bottom: 1px;
+margin-top: 0px;
+  }
 
 /** stjerne */ 
 
@@ -332,7 +338,8 @@ nav ul li a {
 
   #mealtypebreadcrumb{
     font-size: 14px;
-    margin-bottom: 1px;
+    margin-bottom: 4px;
+    margin-top: 2px;
   }
 
   #namebreadcrumb{
