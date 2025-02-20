@@ -32,3 +32,15 @@ main{
     margin-left: 2rem;
     margin-right: 2rem;
 }
+
+@media(min-width: 500px){
+  h1{
+    font-size: 4rem;
+  }
+  p{
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 2.5rem;
+  }
+}
