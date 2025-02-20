@@ -14,7 +14,7 @@ mealtypebreadcrumb.textContent = mealType;
 
 let productContainer = document.querySelector(".container");
 
-fetch(`https://dummyjson.com/recipes`)
+fetch(`https://dummyjson.com/recipes/meal-type/${mealType}`)
   // https://kea-alt-del.dk/t7/api/products/${productId} billeder
   .then((response) => response.json())
   .then((data) => showList(data));

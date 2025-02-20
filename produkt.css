@@ -1,15 +1,20 @@
 
 .lys_firkant {
   background-color: #deb8b8;
+  margin-top: 40px;
+  padding: 10px;
 }
 
 .mørk_firkant {
   background-color: #d09b9b;
   margin-left: 20px;
+  margin-top: 40px;
+  padding: 10px;
 }
 
 p{
     margin-left: 20px;
+
 }
 
 .ikon{
@@ -18,6 +23,7 @@ p{
 
 img{
     width: 100%;
+    margin-top: 30px;
 }
 
 h2{
@@ -27,6 +33,21 @@ h2{
 main{
     margin-left: 2rem;
     margin-right: 2rem;
+}
+
+.elementer{
+    margin-left: 20px;
+   
+}
+
+.elementer p {
+  margin-bottom: 20px; /* Juster afstanden efter behov */
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
 }
 
 @media(min-width: 600px){
@@ -71,12 +92,14 @@ header {
   color: white;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 4rem;
+  text-align: left;
 }
 
 .footer_p {
   font-family: inter;
   color: white;
   margin-top: -5%;
+  margin-left: 0;
 }
 
 label {
@@ -161,7 +184,7 @@ button:hover {
 }
 
 /** MOBIL **/
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .sammen {
     grid-template-columns: 1fr;
   }
@@ -195,6 +218,13 @@ button:hover {
   label {
     font-size: 0.9rem;
   }
+
+  .mørk_firkant {
+  background-color: #d09b9b;
+  margin-left: 0px;
+  margin-top: 40px;
+  padding: 10px;
+}
 }
 
 /* brødkrumme */
@@ -229,11 +259,18 @@ text-decoration: underline; /* Fjerner understregning fra links */
 
 .rating {
   display: flex;
-  align-self: flex-end;
+  align-items: center; /* Sørger for at p og img er centreret vertikalt */
 }
 
 .stjerne {
   width: 22px;
-  margin-left: 5px;
+  margin-left: 5px; /* Lidt luft mellem tekst og ikon */
+  margin-top: 0px;
 }
+
+#nameheading{
+    margin-bottom: 70px;
+}
+
+
 
